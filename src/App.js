@@ -25,7 +25,7 @@ const ps=[
     bottom: "0%",
   }
 ]
-const textt="Tại vì cậu cute vl.... <3";
+const textt="Tại vì anh cute vl.... <3";
 function App() {
   const [positon, setPosition] = useState(0);
   const [text, setText] = useState("");
@@ -47,6 +47,7 @@ function App() {
   return (
     <div className="main">
       <div className="main--bg"/>
+      {/* <p className="pop--footer">Anh có điều này muốn hỏi em nhớ phải trả lời thật lòng nhaaa.</p> */}
       <Route path="/" exact>
         <motion.div className="pop"
               initial={{opacity: 0.7, y: -20}}
