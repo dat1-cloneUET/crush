@@ -47,13 +47,12 @@ function App() {
   return (
     <div className="main">
       <div className="main--bg"/>
-      {/* <p className="pop--footer">Anh có điều này muốn hỏi em nhớ phải trả lời thật lòng nhaaa.</p> */}
       <Route path="/" exact>
         <motion.div className="pop"
               initial={{opacity: 0.7, y: -20}}
               animate={{opacity: 1, y: 0}}>
           <p className="pop--header">He luu !</p>
-          <img src="cat.jpg" alt="" className="pop--img"/>
+          <img src="cat2.jpg" alt="" className="pop--img"/>
           <p className="pop--footer">Anh có điều này muốn hỏi em nhớ phải trả lời thật lòng nhaaa.</p>
           <Link to="/choose" className="pop--button">
             <div >OK</div>
