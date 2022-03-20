@@ -44,45 +44,74 @@ function App() {
     <div className="main">
       <div className="main--bg" />
       <Route path="/" exact>
-        <motion.div className="pop"
-              initial={{opacity: 0.7, y: -20}}
-              animate={{opacity: 1, y: 0}}>
+        <motion.div
+          className="pop"
+          initial={{ opacity: 0.7, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
           <p className="pop--header">Hellu 10B15</p>
-          <img src="cat.jpg" alt="" className="pop--img"/>
+          <img src="cat.jpg" alt="" className="pop--img" />
           <Link to="/choose" className="pop--button">
-            <div >Next</div>
+            <div>Next</div>
           </Link>
         </motion.div>
       </Route>
       <Route path="/choose">
-        <motion.div className="choose"
-              initial={{opacity: 0.7, y: -20}}
-              animate={{opacity: 1, y: 0}}>
+        <motion.div
+          className="choose"
+          initial={{ opacity: 0.7, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
           <p className="choose--header">10B15 có yêu thầy cô không??</p>
           <Link to="/note" className="choose--btn choose--btn__correct">
-            <div>{'Yêu ơi là yêuuuuuu <3'}</div>
+            <div>{"Yêu ơi là yêuuuuuu <3"}</div>
           </Link>
-          <div className="choose--btn choose--btn__wrong" style={ps[positon]}
-               onClick={handleWrong} >
-                Khum
+          <div
+            className="choose--btn choose--btn__wrong"
+            style={ps[positon]}
+            onClick={handleWrong}
+          >
+            Khum
           </div>
         </motion.div>
       </Route>
       <Route path="/note">
-      <motion.div className="note"
-          initial={{opacity: 0.7, y: -20}}
-          animate={{opacity: 1, y: 0}}>
-        <p className="note--text">Thật không zậy? Nói thầy cô biết lí do vì sao thích đi </p>
-        <img src="cute.gif" className="note--img"/>
-        <input value={text} onChange={handleNote} className="note--input"/>
-        <Link to="/1" className="choose--btn note--btn__correct" onClick={ e => handleSend(e)}>
-        <div>
-                Gửi
-        </div>
-        </Link>
-      </motion.div>
-      </Route>  
+        <motion.div
+          className="note"
+          initial={{ opacity: 0.7, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <p className="note--text">
+            Thật không zậy? Nói thầy cô biết lí do vì sao thích đi{" "}
+          </p>
+          <img src="cute.gif" className="note--img" />
+          <input value={text} onChange={handleNote} className="note--input" />
+          <Link
+            to="/0"
+            className="choose--btn note--btn__correct"
+            onClick={(e) => handleSend(e)}
+          >
+            <div>Gửi</div>
+          </Link>
+        </motion.div>
+      </Route>
+      <Route path="/0">
+        <motion.div
+          className="note"
+          initial={{ opacity: 0.7, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <p className="note--text">
+            Thầy cô cũng yêu 10B15, nên thầy cô đã gửi những lời chúc để các bạn
+            đạt được kết quả thi tốt nhất
+          </p>
+          <img src="end.gif" className="note--img" />
 
+          <Link to="/1" className="choose--btn note--btn__correct">
+            <div>Next</div>
+          </Link>
+        </motion.div>
+      </Route>
       <Route path="/1" exact>
         <motion.div
           className="pop"
