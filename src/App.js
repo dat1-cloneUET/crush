@@ -62,7 +62,7 @@ function App() {
           initial={{ opacity: 0.7, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <p className="choose--header">10B15 có yêu thầy cô không??</p>
+          <p className="note--text">10B15 có yêu thầy cô không??</p>
           <Link to="/note" className="choose--btn choose--btn__correct">
             <div>{"Yêu ơi là yêuuuuuu <3"}</div>
           </Link>
