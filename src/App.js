@@ -160,6 +160,21 @@ function App() {
             7. Các bạn hãy chiến thắng chính bản thân mình- Áp lực tạo kim cương
             nha
           </p>
+          <Link to="/4" className="pop--button">
+            <div>Next</div>
+          </Link>
+        </motion.div>
+      </Route>
+      <Route path="/4" exact>
+        <motion.div
+          className="pop"
+          initial={{ opacity: 0.7, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          <img src="pic3.jpg" alt="" className="pop--img" />
+          <p className="pop--footer">
+          Thầy cô mãi ở đây, đợi các chiến binh dũng cảm trở về 🌸
+          </p>
         </motion.div>
       </Route>
     </div>
