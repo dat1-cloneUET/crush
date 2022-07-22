@@ -1,13 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import { Route, Link }  from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from 'react';
 
 const ps=[
-  {
-    // right: "10%",
-  },
   {
     left: "10%",
     top: "2%",
@@ -52,7 +48,7 @@ function App() {
               initial={{opacity: 0.7, y: -20}}
               animate={{opacity: 1, y: 0}}>
           <p className="pop--header">He luu !</p>
-          <img src="cat2.jpg" alt="" className="pop--img"/>
+          <img src="cat.jpg" alt="" className="pop--img"/>
           <p className="pop--footer">Anh có điều này muốn hỏi em nhớ phải trả lời thật lòng nhaaa.</p>
           <Link to="/choose" className="pop--button">
             <div >OK</div>
@@ -63,10 +59,10 @@ function App() {
         <motion.div className="choose"
               initial={{opacity: 0.7, y: -20}}
               animate={{opacity: 1, y: 0}}>
-          <p className="choose--header">Em thích anh phải không ._.</p>
+          <p className="choose--header">Em có thích anh không ._.</p>
           <p className="choose--header2">Nếu em không trả lời mà thoát ra thì phải làm vợ anh đó nhaa</p>
           <Link to="/note" className="choose--btn choose--btn__correct">
-            <div>{'Yêu ơi là yêuuuuuu <3'}</div>
+            <div>{'Thích quá tr <3'}</div>
           </Link>
           <div className="choose--btn choose--btn__wrong" style={ps[positon]}
                onClick={handleWrong} >
